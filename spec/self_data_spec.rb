@@ -1,0 +1,2 @@
+describe SelfData do
+end
