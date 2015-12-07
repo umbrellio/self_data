@@ -33,7 +33,7 @@ class SelfData
       begin
         converters[format].call(data, options)
       rescue => e
-        raise ConversionError, format, e
+        raise ConversionError.new(format, e)
       end
     end
   end
