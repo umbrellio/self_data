@@ -8,3 +8,9 @@ Style/Documentation:
 
 Style/StringLiterals:
   Enabled: false
+
+Style/MultilineOperationIndentation:
+  EnforcedStyle: indented
+
+Style/AndOr:
+  EnforcedStyle: conditionals
