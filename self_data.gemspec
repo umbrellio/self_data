@@ -10,14 +10,9 @@ Gem::Specification.new do |spec|
   spec.email         = ["tdrive@xc0de.ru"]
 
   spec.summary       = ""
-  spec.description   = ""
-  spec.homepage      = ""
-
-  if spec.respond_to?(:metadata)
-    spec.metadata['allowed_push_host'] = "https://github.com/7dr1v3/self_data"
-  else
-    fail "RubyGems 2.0 or newer is required to protect against public gem pushes."
-  end
+  spec.description   = "It's like DATA but better"
+  spec.homepage      = "https://github.com/7dr1v3/self_data"
+  spec.license       = 'MIT'
 
   spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
   spec.bindir        = "exe"
