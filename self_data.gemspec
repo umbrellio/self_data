@@ -9,14 +9,12 @@ Gem::Specification.new do |spec|
   spec.authors       = ["TDrive"]
   spec.email         = ["tdrive@xc0de.ru"]
 
-  spec.summary       = "TODO: Write a short summary, because Rubygems requires one."
-  spec.description   = "TODO: Write a longer description or delete this line."
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.summary       = ""
+  spec.description   = ""
+  spec.homepage      = ""
 
-  # Prevent pushing this gem to RubyGems.org by setting 'allowed_push_host', or
-  # delete this section to allow pushing this gem to any host.
   if spec.respond_to?(:metadata)
-    spec.metadata['allowed_push_host'] = "TODO: Set to 'http://mygemserver.com'"
+    spec.metadata['allowed_push_host'] = "https://github.com/7dr1v3/self_data"
   else
     fail "RubyGems 2.0 or newer is required to protect against public gem pushes."
   end
