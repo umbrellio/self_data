@@ -1,4 +1,4 @@
-describe SelfData do
+describe 'default converters (yaml and erb)' do
   let(:test_var) { 'test_value' }
 
   subject { SelfData.load(context: binding) }
