@@ -43,6 +43,9 @@ SelfData: a.rb data
 ```
 
 # Usage
-Use SelfData.read to get text or use SelfData.load to get formatted data (like yaml, xml, erb, etc).
+Use `SelfData.read()` to get text or use `SelfData.load(*formats, **options)` to get formatted data (like yaml, xml, erb, etc).
 
 Look at the [lib/self_data/config.rb](https://github.com/umbrellio/self_data/blob/master/lib/self_data/config.rb) for more details.
+
+# Note
+SelfData use caller, it's not fast, that is why you shouldn't use SelfData in loops.
