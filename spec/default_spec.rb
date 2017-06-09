@@ -1,9 +1,9 @@
 describe SelfData do
   let(:test_var) { 'test_value' }
 
-  let(:data) { SelfData.load(context: binding) }
+  subject { SelfData.load(context: binding) }
 
-  it { expect(data).to eq(key1: 4, key2: 'test_value') }
+  it { is_expected.to eq(key1: 4, key2: 'test_value') }
 end
 
 __END__
