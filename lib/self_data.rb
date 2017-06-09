@@ -1,4 +1,5 @@
 require "yaml"
+require "json"
 require "active_support/core_ext/module/delegation.rb"
 require "active_support/core_ext/class/attribute.rb"
 
