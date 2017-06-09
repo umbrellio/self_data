@@ -6,12 +6,12 @@ require 'self_data/version'
 Gem::Specification.new do |spec|
   spec.name          = "self_data"
   spec.version       = SelfData::VERSION
-  spec.authors       = ["TDrive"]
-  spec.email         = ["tdrive@xc0de.ru"]
+  spec.authors       = ["Umbrellio"]
+  spec.email         = ["info@umbrellio.biz"]
 
   spec.summary       = ""
   spec.description   = "It's like DATA but better"
-  spec.homepage      = "https://github.com/7dr1v3/self_data"
+  spec.homepage      = "https://github.com/umbrellio/self_data"
   spec.license       = 'MIT'
 
   spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
