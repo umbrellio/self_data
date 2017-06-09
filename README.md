@@ -3,7 +3,7 @@
 It's like native ruby DATA but you can use it not only for main file.
 
 For example:
-```
+```ruby
 # main.rb
 
 require 'self_data'
@@ -16,7 +16,7 @@ __END__
 main.rb data
 ```
 
-```
+```ruby
 # a.rb
 
 module A
@@ -45,4 +45,4 @@ SelfData: a.rb data
 # Usage
 Use SelfData.read to get text or use SelfData.load to get formatted data (like yaml, xml, erb, etc).
 
-Look at the [lib/self_data/config.rb](./self_data/blob/master/lib/self_data/config.rb) for more details.
+Look at the [lib/self_data/config.rb](https://github.com/umbrellio/self_data/blob/master/lib/self_data/config.rb) for more details.
