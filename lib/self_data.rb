@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require "yaml"
 require "json"
 require "active_support/core_ext/module/delegation.rb"
@@ -30,7 +32,7 @@ class SelfData
     options = default_options if options.empty?
 
     formats.reduce(read) do |data, format|
-      fail ConverterNotFound, format unless converters[format]
+      raise ConverterNotFound, format unless converters[format]
       begin
         converters[format].call(data, options)
       rescue => e
@@ -40,15 +42,15 @@ class SelfData
   end
 
   def read
-    IO.read(file).scan(/\n__END__\n(.*)/m).flatten.first or fail NoDataFound, file
+    IO.read(file).scan(/\n__END__\n(.*)/m).flatten.first or raise NoDataFound, file
   end
 
   private
 
   def caller_file
     calls = caller.lazy
-      .map { |call_string| call_string.split(':').first }
-      .select { |file| file != __FILE__ }
+      .map { |call_string| call_string.split(":").first }
+      .reject { |file| file == __FILE__ }
       .select(&File.method(:exist?))
 
     filters.each do |filter|

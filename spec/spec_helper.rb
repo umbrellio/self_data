@@ -1,4 +1,6 @@
-$LOAD_PATH.unshift File.expand_path('../lib', __FILE__)
+# frozen_string_literal: true
 
-require 'pry'
-require 'self_data'
+$LOAD_PATH.unshift File.expand_path("../lib", __FILE__)
+
+require "pry"
+require "self_data"

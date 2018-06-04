@@ -1,9 +1,11 @@
-describe 'default converters (yaml and erb)' do
-  let(:test_var) { 'test_value' }
+# frozen_string_literal: true
 
+describe "default converters (yaml and erb)" do
   subject { SelfData.load(context: binding) }
 
-  it { is_expected.to eq(key1: 4, key2: 'test_value') }
+  let(:test_var) { "test_value" }
+
+  it { is_expected.to eq(key1: 4, key2: "test_value") }
 end
 
 __END__
