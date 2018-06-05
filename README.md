@@ -1,6 +1,6 @@
 # SelfData
 
-It's like native ruby DATA but you can use it not only for main file.
+It's like native ruby `DATA` but you can use it not only for main file.
 
 For example:
 ```ruby
@@ -48,4 +48,4 @@ Use `SelfData.read()` to get text or use `SelfData.load(*formats, **options)` to
 Look at the [lib/self_data/config.rb](https://github.com/umbrellio/self_data/blob/master/lib/self_data/config.rb) for more details.
 
 # Note
-SelfData use caller, it's not fast, that is why you shouldn't use SelfData in loops.
+SelfData uses `caller`, it's not fast, that's why you shouldn't use SelfData in loops.
