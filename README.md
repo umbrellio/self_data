@@ -1,4 +1,4 @@
-# SelfData &middot; [![Gem Version](https://badge.fury.io/rb/self_data.svg)](https://badge.fury.io/rb/self_data) [![Build Status](https://travis-ci.org/umbrellio/self_data.svg?branch=master)](https://travis-ci.org/umbrellio/self_data)
+# SelfData &middot; [![Gem Version](https://badge.fury.io/rb/self_data.svg)](https://badge.fury.io/rb/self_data) [![Build Status](https://travis-ci.org/umbrellio/self_data.svg?branch=master)](https://travis-ci.org/umbrellio/self_data) [![Coverage Status](https://coveralls.io/repos/github/umbrellio/self_data/badge.svg)](https://coveralls.io/github/umbrellio/self_data)
 
 It's like native ruby `DATA` but you can use it not only for main file.
 
