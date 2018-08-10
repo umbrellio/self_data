@@ -1,4 +1,4 @@
-# SelfData
+# SelfData &middot; [![Build Status](https://travis-ci.org/umbrellio/self_data.svg?branch=master)](https://travis-ci.org/umbrellio/self_data)
 
 It's like native ruby `DATA` but you can use it not only for main file.
 
