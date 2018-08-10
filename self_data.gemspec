@@ -12,7 +12,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Umbrellio"]
   spec.email         = ["info@umbrellio.biz"]
 
-  spec.summary       = ""
+  spec.summary       = "It's like DATA but better"
   spec.description   = "It's like DATA but better"
   spec.homepage      = "https://github.com/umbrellio/self_data"
   spec.license       = "MIT"
