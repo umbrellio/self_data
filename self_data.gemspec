@@ -12,7 +12,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Umbrellio"]
   spec.email         = ["info@umbrellio.biz"]
 
-  spec.summary       = ""
+  spec.summary       = "It's like DATA but better"
   spec.description   = "It's like DATA but better"
   spec.homepage      = "https://github.com/umbrellio/self_data"
   spec.license       = "MIT"
@@ -23,8 +23,10 @@ Gem::Specification.new do |spec|
   spec.require_paths = ["lib"]
 
   spec.add_development_dependency "bundler"
+  spec.add_development_dependency "coveralls"
   spec.add_development_dependency "pry"
   spec.add_development_dependency "rake"
   spec.add_development_dependency "rspec"
   spec.add_development_dependency "rubocop-config-umbrellio"
+  spec.add_development_dependency "simplecov"
 end
