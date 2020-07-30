@@ -1,18 +1,15 @@
 # frozen_string_literal: true
 
-require "yaml"
-require "json"
-
 class SelfData
   class << self
     attr_accessor :default_formats, :default_options
 
-    def read(*args)
-      new.read(*args)
+    def read(*args, **kargs)
+      new.read(*args, **kargs)
     end
 
-    def load(*args)
-      new.load(*args)
+    def load(*args, **kargs)
+      new.load(*args, **kargs)
     end
 
     def filters
@@ -46,8 +43,8 @@ class SelfData
       raise ConverterNotFound, format unless self.class.converters[format]
       begin
         self.class.converters[format].call(data, options)
-      rescue => e
-        raise ConversionError.new(format, e)
+      rescue => error
+        raise ConversionError.new(format, error)
       end
     end
   end
