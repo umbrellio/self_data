@@ -46,8 +46,8 @@ class SelfData
       raise ConverterNotFound, format unless self.class.converters[format]
       begin
         self.class.converters[format].call(data, options)
-      rescue => e
-        raise ConversionError.new(format, e)
+      rescue => error
+        raise ConversionError.new(format, error)
       end
     end
   end
