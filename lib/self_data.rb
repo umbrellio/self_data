@@ -7,12 +7,12 @@ class SelfData
   class << self
     attr_accessor :default_formats, :default_options
 
-    def read(*args)
-      new.read(*args)
+    def read(*args, **kargs)
+      new.read(*args, **kargs)
     end
 
-    def load(*args)
-      new.load(*args)
+    def load(*args, **kargs)
+      new.load(*args, **kargs)
     end
 
     def filters
