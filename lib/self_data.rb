@@ -1,8 +1,5 @@
 # frozen_string_literal: true
 
-require "yaml"
-require "json"
-
 class SelfData
   class << self
     attr_accessor :default_formats, :default_options

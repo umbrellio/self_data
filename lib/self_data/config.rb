@@ -1,5 +1,9 @@
 # frozen_string_literal: true
 
+require "erb"
+require "yaml"
+require "json"
+
 SelfData.default_formats = [:erb, :yaml]
 SelfData.default_options = {}
 
