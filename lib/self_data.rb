@@ -24,8 +24,8 @@ class SelfData
       @converters ||= {}
     end
 
-    def add_converter(name, block)
-      converters[name] = block
+    def add_converter(name, proc = nil, &block)
+      converters[name] = proc || block
     end
   end
 
