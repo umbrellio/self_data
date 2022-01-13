@@ -7,6 +7,8 @@ require "self_data/version"
 files_regexp = %r{^(test|spec|features)/}
 
 Gem::Specification.new do |spec|
+  spec.required_ruby_version = ">= 2.6.0"
+
   spec.name          = "self_data"
   spec.version       = SelfData::VERSION
   spec.authors       = ["Umbrellio"]
@@ -21,6 +23,7 @@ Gem::Specification.new do |spec|
   spec.bindir        = "exe"
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
+  spec.metadata      = { "rubygems_mfa_required" => "false" }
 
   spec.add_development_dependency "bundler"
   spec.add_development_dependency "coveralls"

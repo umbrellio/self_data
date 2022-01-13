@@ -24,8 +24,8 @@ class SelfData
       @converters ||= {}
     end
 
-    def add_converter(name, block)
-      converters[name] = block
+    def add_converter(name, proc = nil, &block)
+      converters[name] = proc || block
     end
   end
 
@@ -50,7 +50,7 @@ class SelfData
   end
 
   def read
-    IO.read(file).scan(/\n__END__\n(.*)/m).flatten.first or raise NoDataFound, file
+    File.read(file).scan(/\n__END__\n(.*)/m).flatten.first or raise NoDataFound, file
   end
 
   private
@@ -59,10 +59,10 @@ class SelfData
     calls = caller.lazy
       .map { |call_string| call_string.split(":").first }
       .reject { |file| file == __FILE__ }
-      .select(&File.method(:exist?))
+      .select { |x| File.exist?(x) }
 
     self.class.filters.each do |filter|
-      calls = calls.select(&filter.method(:call))
+      calls = calls.select { |x| filter.call(x) }
     end
 
     calls.first
